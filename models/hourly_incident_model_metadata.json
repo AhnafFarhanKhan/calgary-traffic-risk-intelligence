@@ -1,0 +1,51 @@
+{
+  "model_name": "Poisson HistGradientBoostingRegressor",
+  "target": "hourly recorded Calgary traffic incident count",
+  "training_years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "test_year": 2025,
+  "training_rows": 66587,
+  "test_rows": 7681,
+  "excluded_gap_hours": 4620,
+  "feature_columns": [
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "month_sin",
+    "month_cos",
+    "weekend_feature",
+    "rush_hour",
+    "temp_c",
+    "rel_hum_pct",
+    "wind_speed_kmh",
+    "visibility_km",
+    "freezing_temp",
+    "low_visibility",
+    "snow_flag",
+    "rain_flag",
+    "adverse_weather_flag"
+  ],
+  "baseline": "Historical mean by weekday_number and hour",
+  "baseline_mae": 0.8026185285104461,
+  "model_mae": 0.7969783601311177,
+  "mae_improvement_percent": 0.7027209289319379,
+  "scikit_learn_version": "1.9.1",
+  "imputer": "Median imputation with missing-value indicators",
+  "collection_gap_rule": "Exclude hours inside >48-hour gaps between consecutive recorded incidents.",
+  "limitations": [
+    "Predicts citywide hourly recorded incident activity, not individual crashes.",
+    "Airport weather is used as a citywide weather proxy.",
+    "Traffic-volume exposure is not included.",
+    "Model relationships are predictive associations, not causal effects.",
+    "The traffic-incidents archive can contain collection gaps; a conservative >48-hour gap heuristic is used to exclude obvious outages."
+  ]
+}
