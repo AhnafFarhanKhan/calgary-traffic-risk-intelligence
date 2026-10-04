@@ -1,0 +1,7 @@
+condition,condition_hours,mean_incidents_per_hour_condition,mean_incidents_per_hour_other,relative_rate
+Snow / freezing-precipitation text,6583,1.1338,0.7544,1.502916224814422
+Rain / drizzle / thunderstorm text,3476,0.7917,0.7878,1.004950495049505
+Temperature ≤ 0°C,23459,0.8593,0.7557,1.1370914384014819
+Visibility < 5 km,5241,1.1114,0.7639,1.4549024741458305
+Wind speed ≥ 50 km/h,124,1.1855,0.7877,1.5050145994668023
+Any project adverse-weather condition,27303,0.8389,0.7584,1.1061445147679325
